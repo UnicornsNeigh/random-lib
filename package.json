@@ -1,9 +1,6 @@
 {
-  "name": "@UnicornsNeigh/random-lib",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/UnicornsNeigh"
-  },
-  "version": "1.0.0",
+  "name": "random123azaaaazdsf",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "rollup": "rollup -c"
@@ -24,6 +21,9 @@
   "module": "dist/esm/index.js",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "hi"
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
