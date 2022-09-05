@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import inject from "@rollup/plugin-inject";
 import json from "@rollup/plugin-json";
 // import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
+import { default as dts } from "rollup-plugin-dts";
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import { default as multi } from "rollup-plugin-multi-input";
@@ -11,6 +12,7 @@ import sass from "rollup-plugin-scss";
 
 const EXTENSIONS = [".js", ".jsx", ".ts", ".tsx"];
 import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import svg from "rollup-plugin-svg";
@@ -86,6 +88,6 @@ const types = {
   watch: false,
 };
 
-const config = [esm, cjs, types];
+const config = [esm, cjs, types, locales];
 config.config = { ...esm, output: { ...esm.output, sourcemap: true } };
 module.exports = config
