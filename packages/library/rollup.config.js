@@ -2,18 +2,14 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import inject from "@rollup/plugin-inject";
 import json from "@rollup/plugin-json";
-// import { nodeResolve as resolve } from '@rollup/plugin-node-resolve'
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
-import { default as multi } from "rollup-plugin-multi-input";
 import externals from "rollup-plugin-node-externals";
-import sass from "rollup-plugin-scss";
+
+import resolve from "@rollup/plugin-node-resolve";
+import dts from "rollup-plugin-dts";
 
 const EXTENSIONS = [".js", ".jsx", ".ts", ".tsx"];
-import resolve from "@rollup/plugin-node-resolve";
-import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
-import svg from "rollup-plugin-svg";
 
 const transpile = {
   input: "src/index.ts",
@@ -36,9 +32,12 @@ const transpile = {
 
     // Source code transformation
     json(), // imports json as ES6; doing so enables module resolution
+    // url({ include: ["**/*.png", "**/*.svg"], limit: Infinity }), // imports assets as data URIs
+    // svgr({ jsxRuntime: "automatic" }), // imports svgs as React components (without re-importing React)
+    // svg(),
+    // image(),
     url({ include: ["**/*.png", "**/*.svg"], limit: Infinity }), // imports assets as data URIs
     svgr({ jsxRuntime: "automatic" }), // imports svgs as React components (without re-importing React)
-    sass({ output: "dist/fonts.css", verbose: false }), // generates fonts.css
     commonjs(), // transforms cjs dependencies into tree-shakeable ES modules
 
     babel({
@@ -88,4 +87,4 @@ const types = {
 
 const config = [esm, cjs, types];
 config.config = { ...esm, output: { ...esm.output, sourcemap: true } };
-module.exports = config
+module.exports = config;

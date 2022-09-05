@@ -1,19 +1,20 @@
 {
   "name": "random123azaaaazdsf",
-  "version": "1.0.20",
+  "version": "1.0.38",
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
     "prebuild": "tsc -p tsconfig.build.json",
-    "build": ""
+    "build": "rm -rf dist && rollup -c",
+    "deploy": "yarn build && npm version patch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.18.10",
-    "babel-plugin-macros": "^3.1.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-inject": "^4.0.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -22,6 +23,7 @@
     "@svgr/rollup": "^6.3.1",
     "@types/react": "^18.0.18",
     "@types/styled-components": "^5.1.26",
+    "babel-plugin-macros": "^3.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "react": "^18.2.0",
     "rollup": "^2.79.0",

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "12.2.5",
-    "random123azaaaazdsf": "^1.0.20",
+    "random123azaaaazdsf": "^1.0.38",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
