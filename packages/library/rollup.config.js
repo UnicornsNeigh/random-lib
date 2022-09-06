@@ -15,7 +15,8 @@ const transpile = {
   input: "src/index.ts",
   external: (source) => {
     // @ethersproject/* modules are provided by ethers
-    return source.startsWith("@ethersproject/");
+
+    return source.startsWith("@ethersproject") || source.startsWith("react");
   },
   plugins: [
     // Dependency resolution

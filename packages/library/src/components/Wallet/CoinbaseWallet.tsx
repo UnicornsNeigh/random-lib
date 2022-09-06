@@ -15,7 +15,7 @@ const [coinbaseWallet] = initializeConnector<CoinbaseWallet>((actions) => {
   });
 });
 
-const Wallet = () => (
+const CoinbaseWalletOption = () => (
   <WalletOption
     text="Coinbase Wallet"
     onClick={() => coinbaseWallet.activate()}
@@ -23,4 +23,4 @@ const Wallet = () => (
   />
 );
 
-export default Wallet;
+export default CoinbaseWalletOption;

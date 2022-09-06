@@ -8,7 +8,7 @@ export const [metaMask, hooks] = initializeConnector<MetaMask>(
   (actions) => new MetaMask({ actions })
 );
 
-const Metamask = () => {
+const MetamaskOption = () => {
   const [text, setText] = useState("MetaMask");
 
   return (
@@ -31,4 +31,4 @@ const Metamask = () => {
   );
 };
 
-export default Metamask;
+export default MetamaskOption;

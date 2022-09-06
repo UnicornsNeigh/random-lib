@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       {/* <Div /> */}
       {/* <Wallet /> */}
       <Wallet />
-      <Metamask />
+      {/* <Metamask /> */}
       {/* <CoinbaseOption /> */}
     </div>
   );
