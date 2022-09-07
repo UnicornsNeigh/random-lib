@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import coinbaseIcon from "../../assets/coinbaseWalletIcon.svg";
-import metamaskIcon from "../../assets/metamaskIcon.png";
 
 const Container = styled.div`
   width: 400px;
@@ -10,15 +8,7 @@ const Container = styled.div`
 `;
 
 const Div = () => {
-  return (
-    <Container>
-      <img style={{width: 20, height: 20}} src={coinbaseIcon} alt="missing-image" />
-      <div>meta mask</div>
-      <img style={{width: 20, height: 20}} src={metamaskIcon} alt="missing-image" />
-      
-       {/* <CoinbaseIcon /> */}
-    </Container>
-  );
+  return <Container>Sanity Import to make sure stuff is working</Container>;
 };
 
 export default Div;

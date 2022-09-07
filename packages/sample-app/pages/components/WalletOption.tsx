@@ -18,6 +18,10 @@ const OptionContainer = styled.div`
   border-bottom: 1px solid gray;
   border-radius: 12px;
   margin-bottom: 10px;
+
+  &:hover {
+    background-color: #505050;
+  }
 `;
 
 const Img = styled.img`
