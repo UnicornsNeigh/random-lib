@@ -3251,10 +3251,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-random123azaaaazdsf@^1.0.49:
-  version "1.0.49"
-  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.49.tgz#a63db52edc998dcf549427f92dfc99e9644b36b7"
-  integrity sha512-ZIXz0OC2S/swAA/yosuQCJxL+bq9ZzkBeKp3ZAxZEPFt7ZpylfZC2B1w12uYb6M/3GGShIesmGFIi8hHSZ/7pQ==
+"random123azaaaazdsf@^ 1.0.50":
+  version "1.0.50"
+  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.50.tgz#6ef7f0591db1cc3001474f434dbe59159336b3ab"
+  integrity sha512-PB4ujpoWZ5lEzAr4pxWwAnyiw2xkLMiFqJTwN5H7ohF7WLqypCc7qPOwEIzo3Zjftn/yrLpNika6spa6KVkRTQ==
   dependencies:
     "@walletconnect/ethereum-provider" "^1.8.0"
     "@walletconnect/jsonrpc-http-connection" "^1.0.3"
@@ -3262,6 +3262,7 @@ random123azaaaazdsf@^1.0.49:
     "@web3-react/coinbase-wallet" "8.0.34-beta.0"
     "@web3-react/core" "8.0.35-beta.0"
     "@web3-react/metamask" "8.0.28-beta.0"
+    react-dom "^18.2.0"
     styled-components "^5.3.5"
     tslib "^2.4.0"
 
@@ -3272,7 +3273,7 @@ randombytes@^2.1.0:
   dependencies:
     safe-buffer "^5.1.0"
 
-react-dom@18.2.0:
+react-dom@18.2.0, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { initializeConnector } from "@web3-react/core";
 import { MetaMask } from "@web3-react/metamask";
 import WalletOption from "./WalletOption";
@@ -11,6 +11,12 @@ export const [metaMask, hooks] = initializeConnector<MetaMask>(
 const MetamaskOption = () => {
   const [text, setText] = useState("MetaMask");
 
+  useEffect(() => {
+    if (!window.ethereum) {
+      setText("Install MetaMask");
+    }
+  }, []);
+
   return (
     <WalletOption
       onClick={() => {
@@ -21,7 +27,7 @@ const MetamaskOption = () => {
           })
           .catch((err) => {
             if (err.name === "NoMetaMaskError") {
-              setText("Please Install Metamask");
+              setText("Install MetaMask");
             }
           });
       }}

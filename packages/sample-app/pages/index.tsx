@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <Metamask />
       </div>
 
-      <Modal isOpen={isOpen} />
+      {/* <Modal isOpen={isOpen} /> */}
     </span>
   );
 };
