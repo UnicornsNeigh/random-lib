@@ -5,14 +5,15 @@ import styled from "styled-components";
 import Wallet from "../Wallet";
 
 const WalletWrapper = styled.div`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
+  // position: absolute;
+  // left: 50%;
+  // transform: translateX(-50%);
+  width: 350px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
   top: 20px;
+  background-color: white;
 `;
 
 const useOnClickOutside = (
@@ -62,6 +63,19 @@ const Portal = ({ children }: { children: React.ReactNode }) => {
 
 // console.log(walletRef);
 
+const Background = styled.div`
+  z-index: 2147483647;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+`;
+
 const Modal = ({ isOpen, close }: { isOpen: boolean; close?: () => void }) => {
   const walletRef = useRef(null);
 
@@ -69,9 +83,11 @@ const Modal = ({ isOpen, close }: { isOpen: boolean; close?: () => void }) => {
 
   return isOpen ? (
     <Portal>
-      <WalletWrapper ref={walletRef}>
-        <Wallet />
-      </WalletWrapper>
+      <Background>
+        <WalletWrapper ref={walletRef}>
+          <Wallet />
+        </WalletWrapper>
+      </Background>
     </Portal>
   ) : null;
 };

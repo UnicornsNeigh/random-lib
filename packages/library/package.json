@@ -1,13 +1,13 @@
 {
   "name": "random123azaaaazdsf",
-  "version": "1.0.50",
+  "version": "1.0.51",
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
     "prebuild": "tsc -p tsconfig.build.json",
     "build": "rm -rf dist && rollup -c",
     "deploy": "yarn build && npm version patch",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "author": "",

@@ -17,7 +17,6 @@ const OptionContainer = styled.div`
   padding: 12px 16px;
   border-bottom: 1px solid gray;
   border-radius: 12px;
-  margin-bottom: 10px;
 
   &:hover {
     background-color: #505050;

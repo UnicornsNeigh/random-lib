@@ -3251,11 +3251,12 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-"random123azaaaazdsf@^ 1.0.50":
-  version "1.0.50"
-  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.50.tgz#6ef7f0591db1cc3001474f434dbe59159336b3ab"
-  integrity sha512-PB4ujpoWZ5lEzAr4pxWwAnyiw2xkLMiFqJTwN5H7ohF7WLqypCc7qPOwEIzo3Zjftn/yrLpNika6spa6KVkRTQ==
+"random123azaaaazdsf@^ 1.0.51":
+  version "1.0.51"
+  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.51.tgz#1103ebc46f917c98aeba01efee5417598e399daf"
+  integrity sha512-PQGfbZLSNMgczIzV83uQiITThNNrK5x/Z1W8RfifTPVZKI12Stp2FMK3tSJtbBOBWVplj/PEN7uk+XM6VsNayw==
   dependencies:
+    "@coinbase/wallet-sdk" "^3.5.2"
     "@walletconnect/ethereum-provider" "^1.8.0"
     "@walletconnect/jsonrpc-http-connection" "^1.0.3"
     "@walletconnect/jsonrpc-provider" "^1.0.5"

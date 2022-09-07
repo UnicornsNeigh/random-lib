@@ -1,1 +1,4 @@
 dts/
+dist/
+storybook-static/
+
