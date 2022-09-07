@@ -21,6 +21,7 @@ const OptionContainer = styled.div`
 
   &:hover {
     background-color: #505050;
+    transition: background-color 0.25s linear;
   }
 `;
 
