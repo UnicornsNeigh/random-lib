@@ -17,6 +17,8 @@ export const [walletConnect, hooks] = initializeConnector<WalletConnect>(
 );
 
 const WalletConnectOption = () => {
+  console.log(process.env);
+
   return (
     <WalletOption
       onClick={() => {

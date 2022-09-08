@@ -3,18 +3,20 @@ import { StaticJsonRpcProvider } from "@ethersproject/providers";
 import { AvatarResolver, utils } from "@ensdomains/ens-avatar";
 import styled from "styled-components";
 
-const Img = styled.img`
-  width: 50px;
-  height: 50px;
+const Img = styled.img<{ size: number }>`
+  width: ${(props) => props.size}px;
+  height: ${(props) => props.size}px;
   border-radius: 50%;
 `;
 
 const EnsProfileImage = ({
   rpcProvider,
   ens,
+  size,
 }: {
   rpcProvider: string;
   ens: string;
+  size?: number;
 }) => {
   const [src, setSrc] = useState<null | string>(null);
 
@@ -24,11 +26,14 @@ const EnsProfileImage = ({
     const avt = new AvatarResolver(provider);
     const avatarURI = await avt.getAvatar(ens, {});
     if (avatarURI) setSrc(avatarURI);
+    else {
+      console.log(avatarURI);
+    }
   }
 
   useEffect(() => {
     getAvatar();
-  }, []);
+  }, [ens]);
 
   if (rpcProvider === undefined || rpcProvider.length === 0)
     return (
@@ -45,7 +50,9 @@ const EnsProfileImage = ({
       </div>
     );
 
-  return src ? <Img src={src} /> : null;
+  console.log(size);
+
+  return src ? <Img size={size ?? 24} src={src} /> : null;
 };
 
 export default EnsProfileImage;
