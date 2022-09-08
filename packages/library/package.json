@@ -32,6 +32,7 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "@svgr/rollup": "^6.3.1",
+    "@typechain/ethers-v5": "^7.0.0",
     "@types/react": "^18.0.18",
     "@types/styled-components": "^5.1.26",
     "@web3-react/walletconnect": "8.0.35-beta.0",
@@ -45,6 +46,7 @@
     "rollup-plugin-node-externals": "^5.0.0",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-svg": "^2.0.0",
+    "typechain": "^5.0.0",
     "typescript": "^4.8.2"
   },
   "main": "dist/cjs/index.cjs",
@@ -58,6 +60,8 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "@coinbase/wallet-sdk": "^3.5.2",
+    "@ensdomains/ens-avatar": "^0.1.6",
+    "@ethersproject/contracts": "^5.7.0",
     "@walletconnect/ethereum-provider": "^1.8.0",
     "@walletconnect/jsonrpc-http-connection": "^1.0.3",
     "@walletconnect/jsonrpc-provider": "^1.0.5",
