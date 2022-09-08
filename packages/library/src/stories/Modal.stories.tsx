@@ -27,9 +27,10 @@ const Template: ComponentStory<typeof Modal> = () => {
   const [isOpen, setOpen] = useState(false);
   const url = window.location.href;
   const showModal = useMemo(() => {
-    console.log(url);
     return url.includes("modal");
   }, [url]);
+
+  process.env.bob = "hi";
 
   return (
     <div>

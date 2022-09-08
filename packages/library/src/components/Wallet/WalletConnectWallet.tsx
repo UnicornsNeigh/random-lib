@@ -2,7 +2,9 @@ import React from "react";
 import { initializeConnector } from "@web3-react/core";
 import { WalletConnect } from "@web3-react/walletconnect";
 import WalletOption from "./WalletOption";
+
 import walletConnectIcon from "../../assets/walletConnectIcon.svg";
+import { RPC_URL } from "../../constants";
 
 export const [walletConnect, hooks] = initializeConnector<WalletConnect>(
   (actions) =>
@@ -10,15 +12,13 @@ export const [walletConnect, hooks] = initializeConnector<WalletConnect>(
       actions,
       options: {
         rpc: {
-          1: "https://mainnet.infura.io/v3/",
+          1: RPC_URL,
         },
       },
     })
 );
 
 const WalletConnectOption = () => {
-  console.log(process.env);
-
   return (
     <WalletOption
       onClick={() => {

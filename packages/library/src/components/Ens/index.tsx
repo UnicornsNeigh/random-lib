@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { StaticJsonRpcProvider } from "@ethersproject/providers";
-import { AvatarResolver, utils } from "@ensdomains/ens-avatar";
+import { AvatarResolver } from "@ensdomains/ens-avatar";
 import styled from "styled-components";
+
+import { RPC_URL } from "../../constants";
 
 const Img = styled.img<{ size: number }>`
   width: ${(props) => props.size}px;
@@ -9,16 +11,9 @@ const Img = styled.img<{ size: number }>`
   border-radius: 50%;
 `;
 
-const EnsProfileImage = ({
-  rpcProvider,
-  ens,
-  size,
-}: {
-  rpcProvider: string;
-  ens: string;
-  size?: number;
-}) => {
+const EnsProfileImage = ({ ens, size }: { ens: string; size?: number }) => {
   const [src, setSrc] = useState<null | string>(null);
+  const rpcProvider = process.env.REACT_APP_RPC_URL;
 
   async function getAvatar() {
     const provider = new StaticJsonRpcProvider(rpcProvider);
@@ -26,21 +21,21 @@ const EnsProfileImage = ({
     const avt = new AvatarResolver(provider);
     const avatarURI = await avt.getAvatar(ens, {});
     if (avatarURI) setSrc(avatarURI);
-    else {
-      console.log(avatarURI);
-    }
   }
 
   useEffect(() => {
+    console.log(ens);
     getAvatar();
   }, [ens]);
 
-  if (rpcProvider === undefined || rpcProvider.length === 0)
+  if (rpcProvider === "")
     return (
       <div>
-        Please Pass an rpc provider url, for example:{" "}
-        <b>https://mainnet.infura.io/v3/YOUR_API_KEY</b>. You can get one{" "}
-        <a href="https://infura.io">here </a>
+        Please set an rpc provider url in your environment variables, for
+        example:{" "}
+        <b>REACT_APP_RPC_URL=https://mainnet.infura.io/v3/YOUR_API_KEY</b>. You
+        can get any api key for free <a href="https://infura.io">here </a>. If
+        you are using storybook, you can set it in the side bar.
       </div>
     );
   if (ens === undefined || ens.length === 0)
@@ -49,8 +44,6 @@ const EnsProfileImage = ({
         Please pass an ens name, for example: <b>vitalik.eth</b>
       </div>
     );
-
-  console.log(size);
 
   return src ? <Img size={size ?? 24} src={src} /> : null;
 };

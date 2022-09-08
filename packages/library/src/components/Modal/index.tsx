@@ -61,8 +61,6 @@ const Portal = ({ children }: { children: React.ReactNode }) => {
   return mounted ? createPortal(children, ref.current) : null;
 };
 
-// console.log(walletRef);
-
 const Background = styled.div`
   z-index: 2147483647;
   position: fixed;
@@ -80,6 +78,8 @@ const Modal = ({ isOpen, close }: { isOpen: boolean; close?: () => void }) => {
   const walletRef = useRef(null);
 
   useOnClickOutside(walletRef, close ? close : undefined);
+
+  console.log(process.env);
 
   return isOpen ? (
     <Portal>
