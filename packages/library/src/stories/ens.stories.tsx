@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { EnsProfileImage } from "../components";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Example/ENS",
   component: EnsProfileImage,
@@ -22,7 +21,6 @@ export default {
 } as ComponentMeta<typeof EnsProfileImage>;
 let timer;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof EnsProfileImage> = (args) => {
   const size = args.size ?? 24;
   const [ensName, setEnsName] = useState(args.ens?.trim());

@@ -5,9 +5,6 @@ import styled from "styled-components";
 import Wallet from "../Wallet";
 
 const WalletWrapper = styled.div`
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
   width: 350px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

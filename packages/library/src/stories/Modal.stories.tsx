@@ -22,7 +22,7 @@ const buttonStyle = {
   marginRight: "auto",
   marginTop: 20,
 };
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 const Template: ComponentStory<typeof Modal> = () => {
   const [isOpen, setOpen] = useState(false);
   const url = window.location.href;
@@ -43,8 +43,3 @@ const Template: ComponentStory<typeof Modal> = () => {
 };
 
 export const WalletModal = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-// Primary.args = {
-//   primary: true,
-//   label: "Button",
-// };

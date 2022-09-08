@@ -3,8 +3,6 @@ import { StaticJsonRpcProvider } from "@ethersproject/providers";
 import { AvatarResolver } from "@ensdomains/ens-avatar";
 import styled from "styled-components";
 
-import { RPC_URL } from "../../constants";
-
 const Img = styled.img<{ size: number }>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
@@ -35,7 +33,7 @@ const EnsProfileImage = ({ ens, size }: { ens: string; size?: number }) => {
         example:{" "}
         <b>REACT_APP_RPC_URL=https://mainnet.infura.io/v3/YOUR_API_KEY</b>. You
         can get any api key for free <a href="https://infura.io">here </a>. If
-        you are using storybook, you can set it in the side bar.
+        you are using storybook, you can set it in the controls.
       </div>
     );
   if (ens === undefined || ens.length === 0)
