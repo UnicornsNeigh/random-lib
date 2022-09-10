@@ -71,7 +71,7 @@ const Background = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
 `;
 
-const Modal = ({ isOpen, close }: { isOpen: boolean; close?: () => void }) => {
+const Modal = ({ isOpen, close }: { isOpen: boolean; close: () => void }) => {
   const walletRef = useRef(null);
 
   useOnClickOutside(walletRef, close ? close : undefined);
