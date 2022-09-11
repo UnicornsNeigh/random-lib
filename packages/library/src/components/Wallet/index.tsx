@@ -13,6 +13,7 @@ const Grid = styled.div`
 const Header = styled.h3`
   margin: 0;
   margin-bottom: 10px;
+  color: white;
 `;
 
 const Wallet = () => {
