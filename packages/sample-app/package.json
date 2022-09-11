@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "REACT_APP_RPC_URL=https://mainnet.infura.io/v3/57aedaef2c1143a5b89d753a362a3f07 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

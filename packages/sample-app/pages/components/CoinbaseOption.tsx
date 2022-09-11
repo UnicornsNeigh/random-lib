@@ -4,8 +4,8 @@ import { initializeConnector } from "@web3-react/core";
 
 import WalletOption from "./WalletOption";
 
-export const [coinbaseWallet, hooks] = initializeConnector<CoinbaseWallet>(
-  (actions) => {
+export const [coinbaseWallet, coinbaseHooks] =
+  initializeConnector<CoinbaseWallet>((actions) => {
     return new CoinbaseWallet({
       actions,
       options: {
@@ -14,8 +14,7 @@ export const [coinbaseWallet, hooks] = initializeConnector<CoinbaseWallet>(
         appName: "web3-react",
       },
     });
-  }
-);
+  });
 
 const connect = async () => {
   try {
@@ -29,8 +28,6 @@ const connect = async () => {
 
 const Coinbase = () => {
   //   const isActive = coinbaseWalletConnection.hooks.useIsActive();
-
-
 
   //   useEffect(() => {
   //     // coinbaseWalletConnection.connectEagerly().catch(() => {
@@ -47,10 +44,7 @@ const Coinbase = () => {
   //   }, []);
 
   return (
-    <WalletOption
-      onClick={() => coinbaseWallet.activate()}
-      text="Coinbase"
-    />
+    <WalletOption onClick={() => coinbaseWallet.activate()} text="Coinbase" />
   );
 };
 

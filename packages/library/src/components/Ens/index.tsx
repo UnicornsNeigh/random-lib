@@ -22,11 +22,10 @@ const EnsProfileImage = ({ ens, size }: { ens: string; size?: number }) => {
   }
 
   useEffect(() => {
-    console.log(ens);
     getAvatar();
   }, [ens]);
 
-  if (rpcProvider === "")
+  if (rpcProvider === undefined || rpcProvider === "")
     return (
       <div>
         Please set an rpc provider url in your environment variables, for

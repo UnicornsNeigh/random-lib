@@ -5,17 +5,7 @@ import WalletOption from "./WalletOption";
 import coinbaseIcon from "../../assets/coinbaseWalletIcon.svg";
 
 import { RPC_URL } from "../../constants";
-
-const [coinbaseWallet] = initializeConnector<CoinbaseWallet>((actions) => {
-  return new CoinbaseWallet({
-    actions,
-    options: {
-      url: RPC_URL,
-      // @ts-ignore
-      appName: "web3-react",
-    },
-  });
-});
+import { coinbaseWallet } from "../../constants/connectors";
 
 const CoinbaseWalletOption = () => (
   <WalletOption

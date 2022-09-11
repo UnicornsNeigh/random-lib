@@ -77,8 +77,6 @@ const Modal = ({ isOpen, close }: { isOpen: boolean; close: () => void }) => {
 
   useOnClickOutside(walletRef, close ? close : undefined);
 
-  console.log(process.env);
-
   return isOpen ? (
     <Portal>
       <Background>
