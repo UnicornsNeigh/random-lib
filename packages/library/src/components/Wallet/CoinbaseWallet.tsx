@@ -5,14 +5,19 @@ import WalletOption from "./WalletOption";
 import coinbaseIcon from "../../assets/coinbaseWalletIcon.svg";
 
 import { RPC_URL } from "../../constants";
-import { coinbaseWallet } from "../../constants/connectors";
+import connections from "../../constants/connectors";
 
-const CoinbaseWalletOption = () => (
-  <WalletOption
-    text="Coinbase Wallet"
-    onClick={() => coinbaseWallet.activate()}
-    src={coinbaseIcon}
-  />
-);
+// [coinbaseWallet, coinbaseHooks]
+const CoinbaseWalletOption = () => {
+  const [coinbaseWallet] = connections;
+
+  return (
+    <WalletOption
+      text="Coinbase Wallet"
+      onClick={() => coinbaseWallet.activate()}
+      src={coinbaseIcon}
+    />
+  );
+};
 
 export default CoinbaseWalletOption;

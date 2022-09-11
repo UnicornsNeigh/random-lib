@@ -1,6 +1,6 @@
 {
   "name": "random123azaaaazdsf",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
