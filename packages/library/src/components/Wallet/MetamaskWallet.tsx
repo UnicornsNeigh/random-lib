@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import WalletOption from "./WalletOption";
 import metamaskicon from "../../assets/metamaskIcon.png";
 import { metaMaskConnector } from "../../constants/connectors";
@@ -11,7 +12,18 @@ const MetamaskOption = () => {
     if (!window.ethereum) {
       setText("Install MetaMask");
     }
-  }, []);
+
+    metaMask
+      .connectEagerly()
+      .then((success) => {
+        console.log("success");
+        console.log(success);
+      })
+      .catch((err) => {
+        console.log("error");
+        console.log(err);
+      });
+  }, [metaMask]);
 
   return (
     <WalletOption
