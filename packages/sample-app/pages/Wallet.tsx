@@ -12,8 +12,8 @@ const Wallet = () => {
   return (
     <div>
       <button onClick={() => setIsOpen(true)}>Open</button>
-      {/* <Modal isOpen={isOpen} close={() => setIsOpen(false)} /> */}
-      <Coinbase />
+      <Modal isOpen={isOpen} close={() => setIsOpen(false)} />
+      {/* <Coinbase /> */}
     </div>
   );
 };

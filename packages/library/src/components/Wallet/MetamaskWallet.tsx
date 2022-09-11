@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { initializeConnector } from "@web3-react/core";
-import { MetaMask } from "@web3-react/metamask";
 import WalletOption from "./WalletOption";
 import metamaskicon from "../../assets/metamaskIcon.png";
-
-export const [metaMask, hooks] = initializeConnector<MetaMask>(
-  (actions) => new MetaMask({ actions })
-);
+import { metaMaskConnection } from "../../constants/connectors";
 
 const MetamaskOption = () => {
   const [text, setText] = useState("MetaMask");
+  const [metaMask] = metaMaskConnection;
 
   useEffect(() => {
     if (!window.ethereum) {

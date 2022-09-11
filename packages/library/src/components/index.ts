@@ -4,3 +4,4 @@ export { default as EnsProfileImage } from "./Ens";
 export { default as CoinbaseWallet } from "./Wallet/CoinbaseWallet";
 export { default as MetaMaskWallet } from "./Wallet/MetaMaskWallet";
 export { default as WalletConnectWallet } from "./Wallet/WalletConnectWallet";
+export { default as connectors } from "../constants/connectors";

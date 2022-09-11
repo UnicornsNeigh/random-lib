@@ -1,24 +1,12 @@
 import React from "react";
-import { initializeConnector } from "@web3-react/core";
-import { WalletConnect } from "@web3-react/walletconnect";
 import WalletOption from "./WalletOption";
 
 import walletConnectIcon from "../../assets/walletConnectIcon.svg";
-import { RPC_URL } from "../../constants";
-
-export const [walletConnect, hooks] = initializeConnector<WalletConnect>(
-  (actions) =>
-    new WalletConnect({
-      actions,
-      options: {
-        rpc: {
-          1: RPC_URL,
-        },
-      },
-    })
-);
+import { walletConnectConnection } from "../../constants/connectors";
 
 const WalletConnectOption = () => {
+  const [walletConnect] = walletConnectConnection;
+
   return (
     <WalletOption
       onClick={() => {
