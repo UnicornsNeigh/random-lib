@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import WalletOption from "./WalletOption";
 import metamaskicon from "../../assets/metamaskIcon.png";
-import { metaMaskConnection } from "../../constants/connectors";
+import { metaMaskConnector } from "../../constants/connectors";
 
 const MetamaskOption = () => {
   const [text, setText] = useState("MetaMask");
-  const [metaMask] = metaMaskConnection;
+  const [metaMask] = metaMaskConnector;
 
   useEffect(() => {
     if (!window.ethereum) {

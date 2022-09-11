@@ -5,11 +5,11 @@ import WalletOption from "./WalletOption";
 import coinbaseIcon from "../../assets/coinbaseWalletIcon.svg";
 
 import { RPC_URL } from "../../constants";
-import { coinbaseConnection } from "../../constants/connectors";
+import { coinbaseConnector } from "../../constants/connectors";
 
 // [coinbaseWallet, coinbaseHooks]
 const CoinbaseWalletOption = () => {
-  const [coinbaseWallet] = coinbaseConnection;
+  const [coinbaseWallet] = coinbaseConnector;
 
   return (
     <WalletOption

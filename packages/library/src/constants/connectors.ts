@@ -3,7 +3,7 @@ import { MetaMask } from "@web3-react/metamask";
 import { initializeConnector } from "@web3-react/core";
 import { WalletConnect } from "@web3-react/walletconnect";
 
-export const coinbaseConnection = initializeConnector<CoinbaseWallet>(
+export const coinbaseConnector = initializeConnector<CoinbaseWallet>(
   (actions) => {
     return new CoinbaseWallet({
       actions,
@@ -15,11 +15,11 @@ export const coinbaseConnection = initializeConnector<CoinbaseWallet>(
   }
 );
 
-export const metaMaskConnection = initializeConnector<MetaMask>(
+export const metaMaskConnector = initializeConnector<MetaMask>(
   (actions) => new MetaMask({ actions })
 );
 
-export const walletConnectConnection = initializeConnector<WalletConnect>(
+export const walletConnectConnector = initializeConnector<WalletConnect>(
   (actions) =>
     new WalletConnect({
       actions,
@@ -32,9 +32,9 @@ export const walletConnectConnection = initializeConnector<WalletConnect>(
 );
 
 const connections = {
-  coinbaseConnection,
-  metaMaskConnection,
-  walletConnectConnection,
+  coinbaseConnector,
+  metaMaskConnector,
+  walletConnectConnector,
 };
 
 export default connections;

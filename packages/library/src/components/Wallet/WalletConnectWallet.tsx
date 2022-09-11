@@ -2,10 +2,10 @@ import React from "react";
 import WalletOption from "./WalletOption";
 
 import walletConnectIcon from "../../assets/walletConnectIcon.svg";
-import { walletConnectConnection } from "../../constants/connectors";
+import { walletConnectConnector } from "../../constants/connectors";
 
 const WalletConnectOption = () => {
-  const [walletConnect] = walletConnectConnection;
+  const [walletConnect] = walletConnectConnector;
 
   return (
     <WalletOption
