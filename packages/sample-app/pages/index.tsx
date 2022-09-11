@@ -16,8 +16,8 @@ import { connectors } from "random123azaaaazdsf";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { coinbaseConnection } = connectors;
-  const [coinbaseWallet, coinbaseHooks] = coinbaseConnection;
+  const { coinbaseConnector } = connectors;
+  const [coinbaseWallet, coinbaseHooks] = coinbaseConnector;
 
   console.log(process.env);
 

@@ -11,19 +11,8 @@ const MetamaskOption = () => {
   useEffect(() => {
     if (!window.ethereum) {
       setText("Install MetaMask");
-    }
-
-    metaMask
-      .connectEagerly()
-      .then((success) => {
-        console.log("success");
-        console.log(success);
-      })
-      .catch((err) => {
-        console.log("error");
-        console.log(err);
-      });
-  }, [metaMask]);
+    } else setText("MetaMask");
+  }, [window.ethereum]);
 
   return (
     <WalletOption
