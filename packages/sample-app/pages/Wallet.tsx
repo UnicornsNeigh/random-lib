@@ -4,10 +4,11 @@ import { Modal } from "random123azaaaazdsf";
 import Coinbase from "./components/CoinbaseOption";
 
 const Wallet = () => {
-  const { account } = useWeb3React();
+  const { account, ...rest } = useWeb3React();
   const [isOpen, setIsOpen] = useState(false);
 
   console.log(account);
+  console.log(rest);
 
   return (
     <div>

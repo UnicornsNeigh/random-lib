@@ -16,13 +16,14 @@ import { connectors } from "random123azaaaazdsf";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { coinbaseConnector } = connectors;
+  const { coinbaseConnector, walletConnectConnector } = connectors;
   const [coinbaseWallet, coinbaseHooks] = coinbaseConnector;
+  // const [walletConnectConnector]
 
   console.log(process.env);
 
   return (
-    <Web3ReactProvider connectors={[[coinbaseWallet, coinbaseHooks]]}>
+    <Web3ReactProvider connectors={[coinbaseConnector, walletConnectConnector]}>
       <Wallet />
     </Web3ReactProvider>
   );

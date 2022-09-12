@@ -5,3 +5,4 @@ export { default as CoinbaseWallet } from "./Wallet/CoinbaseWallet";
 export { default as MetaMaskWallet } from "./Wallet/MetaMaskWallet";
 export { default as WalletConnectWallet } from "./Wallet/WalletConnectWallet";
 export { default as connectors } from "../constants/connectors";
+export { WalletType } from "../constants/connectors";
