@@ -3,7 +3,7 @@ import { MetaMask } from "@web3-react/metamask";
 import { initializeConnector } from "@web3-react/core";
 import { WalletConnect } from "@web3-react/walletconnect";
 
-export enum WalletType {
+export enum ConnectionType {
   COINBASE,
   META_MASK,
   WALLET_CONNECT,
