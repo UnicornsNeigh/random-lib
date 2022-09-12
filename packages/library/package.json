@@ -35,7 +35,6 @@
     "@typechain/ethers-v5": "^7.0.0",
     "@types/react": "^18.0.18",
     "@types/styled-components": "^5.1.26",
-    "@web3-react/walletconnect": "8.0.35-beta.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
@@ -68,6 +67,7 @@
     "@web3-react/coinbase-wallet": "8.0.34-beta.0",
     "@web3-react/core": "8.0.35-beta.0",
     "@web3-react/metamask": "8.0.28-beta.0",
+    "@web3-react/walletconnect": "8.0.35-beta.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5",
     "tslib": "^2.4.0"

@@ -3384,10 +3384,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-random123azaaaazdsf@^1.0.59:
-  version "1.0.59"
-  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.59.tgz#2becd53d11cde426a99fb5d0edcb64d1230a770a"
-  integrity sha512-5fthGYP5Oh6PHesnKFMGO2XM6NHjBmhb3wH/iJTE2kbd5lyAe9utYTM4btIizStBkMslUBGWd+JBUZUzedijvQ==
+random123azaaaazdsf@^1.0.60:
+  version "1.0.60"
+  resolved "https://registry.yarnpkg.com/random123azaaaazdsf/-/random123azaaaazdsf-1.0.60.tgz#4e4fe9db1e1f12367f6c0975a7fdee81f44a5c8c"
+  integrity sha512-FeqZ+nkg1R8hvvVMrMZoCRBPafHh5gSl69zXKlIPDDWf4ijtroLn3OZOlTPAXjC0poTidMMaKEpaUavilNqN8w==
   dependencies:
     "@coinbase/wallet-sdk" "^3.5.2"
     "@ensdomains/ens-avatar" "^0.1.6"

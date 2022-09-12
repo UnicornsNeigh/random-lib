@@ -12,18 +12,17 @@ import { initializeConnector } from "@web3-react/core";
 import { CoinbaseWallet } from "@web3-react/coinbase-wallet";
 import { Web3ReactHooks, Web3ReactProvider } from "@web3-react/core";
 // import { coinbaseWallet, coinbaseHooks } from "./components/CoinbaseOption";
-import { connectors } from "random123azaaaazdsf";
+import { connectors, WalletType } from "random123azaaaazdsf";
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { coinbaseConnector, walletConnectConnector } = connectors;
-  const [coinbaseWallet, coinbaseHooks] = coinbaseConnector;
-  // const [walletConnectConnector]
-
-  console.log(process.env);
+  // const { coinbaseConnector, walletConnectConnector } = connectors;
+  // const [coinbaseWallet, coinbaseHooks] = coinbaseConnector;
+  console.log(connectors[WalletType.COINBASE]);
+  // console.log(WalletType);
 
   return (
-    <Web3ReactProvider connectors={[coinbaseConnector, walletConnectConnector]}>
+    <Web3ReactProvider connectors={connectors}>
       <Wallet />
     </Web3ReactProvider>
   );
